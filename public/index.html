@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fleetdown Last Man Standing</title>
+  <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+  <div id="login-screen" class="login-wrap" style="display:none;">
+  <div class="login-card">
+  <h1 id="login-title">Fleetdown Last Man Standing</h1>
+  <div class="sub">Premier League only. One team, once a season.</div>
+<form class="stack" id="login-form">
+<input type="text" id="login-name" placeholder="Your name" autocomplete="username" required />
+  <input type="password" id="login-pin" placeholder="PIN" autocomplete="current-password" required />
+  <button class="primary" type="submit">Log in</button>
+  <div class="error" id="login-error"></div>
+  <div class="small">Don't have an account? Ask your Fleetdown admin to add you.</div>
+  </form>
+  </div>
+  </div>
+
+  <div id="app" style="display:none;">
+  <header class="topbar">
+  <div class="brand">
+  <div class="badge">FD</div>
+  <div>
+  <h1 id="comp-name">Fleetdown Last Man Standing</h1>
+  <div class="sub">Premier League only</div>
+</div>
+</div>
+<div class="who">
+<span id="who-name"></span>
+<button class="link" id="logout-btn">Log out</button>
+  </div>
+  </header>
+
+  <main>
+  <div class="tabs" id="tabs">
+  <button data-tab="pick" class="active">Pick</button>
+  <button data-tab="standings">Standings</button>
+  <button data-tab="mypicks">My Picks</button>
+  <button data-tab="account">Account</button>
+  <button data-tab="admin" id="admin-tab-btn" style="display:none;">Admin</button>
+  </div>
+
+  <div id="tab-pick" class="tab-panel"></div>
+  <div id="tab-standings" class="tab-panel" style="display:none;"></div>
+  <div id="tab-mypicks" class="tab-panel" style="display:none;"></div>
+  <div id="tab-account" class="tab-panel" style="display:none;"></div>
+  <div id="tab-admin" class="tab-panel" style="display:none;"></div>
+  </main>
+  </div>
+
+  <script src="app.js"></script>
+  </body>
+  </html>
+  
